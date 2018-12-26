@@ -1,0 +1,41 @@
+<h2>Welcome !</h2>
+<form #f="ngForm">
+  Name: <input type="text" name="hel" #hel="ngModel" #fname appForbiddonName="rock" [(ngModel)]="ename" minlength="4" maxlength="12"   required><br>
+  <div *ngIf="hel.invalid && (hel.touched || hel.dirty)">
+       <!-- {{fname.className}} // Classes changes on each validation event-->
+        <div *ngIf="hel.errors.required">
+          required<sup>*</sup>;
+        </div >
+
+        <div *ngIf="hel.errors.minlength">
+          minimum length *4*
+        </div>
+
+        <div *ngIf="hel.errors.maxlength">
+          maxlength *12*
+        </div>
+
+        <div *ngIf="hel.errors.forbiddonName">
+          *forbiddon
+        </div>
+
+  </div>
+ 
+  <br>
+  Email: <input type="email" name="email" [(ngModel)]="email">
+  <br>
+  Password: <input type="password" name="pass" #pas="ngModel"  [(ngModel)]="passwd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+  <div *ngIf="pas.invalid && (pas.touched || pas.dirty)">
+      <div *ngIf="pas.errors.required">
+        required<sup>*</sup>;
+      </div >
+
+      <div *ngIf="pas.errors.pattern">
+          password format<sup>*</sup>;
+        </div >
+
+    </div>
+  <br>
+  <input type="submit">
+</form>
+{{f.value | json}}

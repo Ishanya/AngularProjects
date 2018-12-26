@@ -1,0 +1,21 @@
+
+<div class=" align-items-center " style="margin-left: 40%;">
+<h3>Welcome Customer </h3>
+<div [hidden]="submitted" style="width: 300px;">
+	<form (ngSubmit)="initRegister()">
+
+		<div class="form-group">
+			<label for="seats">No of seats</label> <input type="text"
+				class="form-control" id="noOfSeats" required
+				[(ngModel)]="model.noOfSeats" name="noOfSeats">
+		</div>
+ 
+    
+	
+		<div class="btn-group">
+			<button class="btn btn-primary" (click)="goOut()">Logout</button>
+			<button type="submit" class="btn btn-success">Register</button>
+		</div>
+	</form>
+</div>
+</div>

@@ -1,0 +1,46 @@
+<body>
+ <h4>Mittal<span>.</span></h4>
+ <br>
+ <br>
+ <br>
+  <div class="container-fluid border " id="main">
+  <div id="heading" >
+      <h2 id="Registration_head">Registration Form</h2>
+  </div>
+<div  >
+  
+  <form [formGroup]="loginForm">
+    <br>
+     
+      <br>
+    <div class="form-group">
+      <label>Email</label>
+      <input formControlName="userName" type="email" class="form-control"  [class.is-invalid]="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+  
+      <div *ngIf="loginForm['controls'].userName.errors.required" class="alert alert-danger">
+          field id required
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input formControlName="password"  type="password" class="form-control">
+      <div *ngIf="LoginForm['controls'].password.hasError('pattern')" class="alert alert-danger">
+         follow pattern
+      </div>
+    </div>
+   
+      
+   
+  
+    <button id="login" (click)="loginUser(loginForm.value)" class=" btn btn-primary" >Login</button> 
+    <button id="signup" (click)="signupcomp()" class="btn btn-warning">Signup</button>
+    <br>
+    <br>
+    
+  </form>
+</div>
+</div>
+<div id="end">
+
+</div>
+</body>

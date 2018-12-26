@@ -1,0 +1,24 @@
+<head>
+  <style>
+    table{
+      margin-left: 5%;
+    }
+  table,tr,th,td{
+    border:1px solid black;
+  }
+</style>
+</head>
+<br>
+<table >
+  <tr>
+    <th>Liquor</th><th>Votes</th><th colspan="2"></th>
+  </tr>
+  <tr>
+    <td rowspan="2">{{cat.drinkk}}</td>
+    <td rowspan="2">{{cat.vote}}</td>
+    <td><button type="button" (click)="UpVote()">UpVote</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" (click)="DownVote()">DownVote</button></td>
+  </tr>
+</table>

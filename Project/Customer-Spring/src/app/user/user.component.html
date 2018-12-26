@@ -1,0 +1,23 @@
+<div class="col-md-6">
+  <h2> User Details</h2>
+  
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Name</th>
+      <th>Balance</th>
+      <th></th>
+     
+    </tr>
+  </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td class="hidden">{{user.custId}}</td>
+      <td>{{user.custName}}</td>
+      <td>{{user.balance}}</td>
+      <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete User</button></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>

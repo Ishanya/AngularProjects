@@ -1,0 +1,32 @@
+
+.container-fluid{
+    width:35vw;
+    background-color: white;
+}
+#heading{
+    width:35vw;
+    height:7vw;
+    background-image:linear-gradient(to right,rgb(252, 239, 239),rgb(231, 160, 178));
+    margin-left: -1.12vw;
+}
+
+#Registration_head{
+    margin-left: 6vw;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 3vw;
+}
+
+body{
+background-image: url("D:/Angular5/Project/responsive/src/assets/coffee.jpg");
+
+
+}
+
+
+#signup{
+    margin-left: 21vw;
+}
+
+#end{
+    height:10.5vw;
+}

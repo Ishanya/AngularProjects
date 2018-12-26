@@ -1,0 +1,6 @@
+projectKey=company:LoginMicro
+serverUrl=http://localhost:9000
+serverVersion=6.7.5.38563
+dashboardUrl=http://localhost:9000/dashboard/index/company:LoginMicro
+ceTaskId=AWcHiMWujcxhxFk1v2jS
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWcHiMWujcxhxFk1v2jS

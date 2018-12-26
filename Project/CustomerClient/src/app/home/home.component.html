@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  
+   
+  <a class="navbar-brand text-light" href="#">Shipping</a>
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class="nav-item active">
+      <a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#">Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#"></a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right ">
+      <li id="link1" style="margin-left: -0.2vw;"><button type="button" class=" btn-link text-light" style="margin-top: 0.8vw;" onclick="signe()"><span class="glyphicon glyphicon-user text-light"></span> Sign Up</button></li>
+      <li id="link2"style="margin-left: -0.2vw;"><button class="btn-link text-light" style="margin-top: 0.8vw;" onclick="logging()"><span class="glyphicon glyphicon-log-in text-light"></span> Login</button></li>
+    </ul>
+
+</nav>
+
+<br>
+<br>
+<br>
+<div [hidden]="submitted" style="width: 50%; background-color:rgb(209, 206, 206); margin-left: 6vw">
+ 
+<div style="margin-left:-5vw"><app-signup></app-signup></div>
+</div>
+
+<div [hidden]="submissive">
+  <app-login></app-login>
+  </div>

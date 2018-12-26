@@ -1,0 +1,93 @@
+<body>
+ 
+  <div class="container-fluid border " id="main">
+  <div id="heading" >
+      <h2 id="Registration_head">Registration Form</h2>
+  </div>
+<div  >
+  
+  <form [formGroup]="registrationForm">
+    <br>
+     
+      <br>
+    <div class="form-group">
+      <label>Username</label>
+      <input formControlName="userName" type="text" class="form-control" #uname [class.is-invalid]="registrationForm.controls['userName'].invalid && registrationForm.controls['userName'].touched">
+     
+      
+     <!-- <div *ngIf="registrationForm.controls['userName'].hasError('required')" class="alert alert-danger">
+        Please enter name
+      </div>-->
+      <div *ngIf="registrationForm['controls'].userName.hasError('minlength')" class="alert alert-danger">
+          mind the length
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input formControlName="password"  type="password" class="form-control">
+      <div *ngIf="registrationForm['controls'].password.hasError('pattern')" class="alert alert-danger">
+         follow pattern
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Confirm password</label>
+      <input formControlName="cnfpassword"  type="password" class="form-control">
+      <div *ngIf="registrationForm['controls'].cnfpassword.hasError('pattern')" class="alert alert-danger">
+          follow cnfpattern
+      </div>
+      
+    </div>
+
+
+<div class="form-group">
+ 
+    <label>Gender</label>
+    <br>
+    <div  >
+       <label class="radio-inline" id="gender_male"> Male</label> <input  class="form-control"  formControlName="gender" type="radio" value="male" name="sex" id="male" checked>
+       <label class="radio-inline" id="gender_female">Female </label><input  class="form-control" formControlName="gender" id="female" value="feMale"  type="radio" name="sex"  >
+       <div *ngIf="registrationForm['controls'].gender.hasError('required')" class="alert alert-danger">
+          fill gender
+      </div>
+      </div>
+
+  
+      </div>
+
+    <div formGroupName="address">
+
+      <div class="form-group">
+        <label>Postal</label>
+        <input formControlName="postalName"  type="text" class="form-control">
+        <div *ngIf="registrationForm['controls'].address['controls'].postalName.hasError('pattern')" class="alert alert-danger">Format follow</div>
+      </div>
+      <div class="form-group">
+        <label>city</label>
+        <input formControlName="city"  type="text" class="form-control">
+        <div *ngIf="registrationForm['controls'].address['controls'].city.hasError('pattern')" class="alert alert-danger">City filled</div>
+      </div>
+      
+
+      <div class="form-group">
+          <label >State:</label>
+          <select class="form-control" formControlName="state" class="form-control">
+            <option disabled>----Select----</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Gujrat">Gujrat</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Assam">Assam</option>
+          </select>
+          <div *ngIf="registrationForm['controls'].address['controls'].state.hasError('required')" class="alert alert-danger">state filled</div>
+        
+        </div>
+        
+
+
+    </div>
+  <!--  <button (click)="data(registrationForm.value)" class=" btn btn-primary">Register</button> &nbsp;
+    <button (click)="LoadApiData()" class="btn btn-secondary">LoadAPIdata</button>-->
+    <app-signup-button></app-signup-button>
+  </form>
+</div>
+</div>
+</body>

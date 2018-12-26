@@ -1,0 +1,32 @@
+<body style="background-color: gray">
+<div class=" align-items-center " style="margin-left: 35vw;">
+<h3>Login Form</h3>
+<div [hidden]="submitted" style="width: 300px;">
+	<form (ngSubmit)="initLogin()">
+		<div class="form-group">
+			<label for="userId">user ID</label> <input type="text"
+				class="form-control" id="userId" required
+				[(ngModel)]="model.userID" name="userId">
+		</div>
+ 
+		<div class="form-group">
+			<label for="password">Password</label> <input type="text"
+				class="form-control" id="password" required
+				[(ngModel)]="model.password" name="password">
+		</div>
+ 
+		<div class="btn-group">
+		
+			<button type="submit" class="btn btn-success">LogIn</button>
+		</div>
+	</form>
+</div>
+ 
+<div [hidden]="!submitted">
+	<div class="btn-group ">
+		<h4>You submitted successfully!</h4>
+		<button class="btn btn-success" (click)="newCustomer()">Add</button>
+	</div>
+</div>
+</div>
+</body>

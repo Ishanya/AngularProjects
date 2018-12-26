@@ -1,0 +1,13 @@
+<!--<p >
+{{salaryCheck(emps)}}
+</p>-->
+
+<table ng-if="emps.empSalary==10000" [ngStyle]="{color:'red'}" >
+    <tr><td>10000</td><td>{{emps.empName}}</td></tr>
+</table>
+<table ng-if="emps.empSalary==20000">
+    <tr><td>20000</td><td>{{emps.empName}}</td></tr>
+</table>
+<table ng-if="emps.empSalary==30000">
+    <tr><td>30000</td><td>{{emps.empName}}</td></tr>
+</table>

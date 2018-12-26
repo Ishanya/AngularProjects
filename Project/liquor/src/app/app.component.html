@@ -1,0 +1,18 @@
+<div>
+<div class="container bg-primary">
+  
+<form>
+  <div class="form-group">
+  <label for="Drinks">Drinks</label><br>
+  <input type="text" name="drink" #drink>
+</div>
+
+</form>
+<button type="button" value="add" (click)="addLiquor(drink)">Add</button>
+<button type="button" value="sort" (click)="sortLiquor(drink)">Sort</button>
+</div>
+</div>
+<div *ngFor="let detail of drinks">
+  <app-drink [cat]="detail"></app-drink>
+</div>
+
